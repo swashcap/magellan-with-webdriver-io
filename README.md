@@ -1,2 +1,3 @@
 # magellan-with-webdriver-io
-Sample setup of TestArmada’s magellan with WebdriverIO
+
+_Sample setup of [TestArmada’s magellan](https://github.com/TestArmada/magellan) with [WebdriverIO](https://webdriver.io)._
