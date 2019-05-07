@@ -1,0 +1,10 @@
+{
+  "name": "magellan-with-webdriver-io",
+  "version": "1.0.0",
+  "description": "Sample setup of TestArmada’s magellan with WebdriverIO",
+  "main": "index.js",
+  "repository": "git@github.com:swashcap/magellan-with-webdriver-io.git",
+  "author": "Cory Reed",
+  "license": "Apache-2.0",
+  "private": true
+}
