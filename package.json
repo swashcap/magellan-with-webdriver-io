@@ -2,7 +2,7 @@
   "name": "magellan-with-webdriver-io",
   "version": "1.0.0",
   "description": "Sample setup of TestArmada’s magellan with WebdriverIO",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "repository": "git@github.com:swashcap/magellan-with-webdriver-io.git",
   "author": "Cory Reed",
   "license": "Apache-2.0",
@@ -42,6 +42,6 @@
     "build": "tsc",
     "clean": "find src -type f -name '*.js' -exec rm {} \\+",
     "format": "prettier --write '*.js' '{src,types}/**/*.ts'",
-    "start": "NODE_ENV=production node src/index.js"
+    "start": "NODE_ENV=production node src/server.js"
   }
 }
