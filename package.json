@@ -61,6 +61,7 @@
     "build:ts": "tsc",
     "clean": "find src -type f -name '*.js' -exec rm {} \\+",
     "format": "prettier --write '*.js' '{src,types}/**/*.{ts,tsx}'",
-    "start": "NODE_ENV=production node src/server.js"
+    "start": "NODE_ENV=production node src/server.js",
+    "test": "wdio wdio.conf.js"
   }
 }
