@@ -1,16 +1,18 @@
 import 'hard-rejection/register'
 
+import ejs from 'ejs'
 import good from '@hapi/good'
 import hapi from '@hapi/hapi'
 import inert from '@hapi/inert'
 import path from 'path'
+import vision from '@hapi/vision'
 
 const port = 4000
 
 const getServer = async () => {
   const server = new hapi.Server({ port })
 
-  await server.register(inert)
+  await server.register([inert, vision])
 
   if (process.env.NODE_ENV !== 'test') {
     await server.register({
@@ -35,6 +37,28 @@ const getServer = async () => {
       plugin: good
     })
   }
+
+  server.views({
+    context: {
+      htmlWebpackPlugin: {
+        files: {},
+        options: {
+          appMountId: 'app',
+          title: 'Magellan with WebdriverIO'
+        }
+      }
+    },
+    engines: { ejs },
+    isCached: process.env.NODE_ENV === 'production',
+    path: path.resolve(__dirname, '../node_modules/html-webpack-template')
+  })
+  server.route({
+    handler: {
+      view: 'index'
+    },
+    method: 'GET',
+    path: '/'
+  })
 
   server.route({
     handler: {
