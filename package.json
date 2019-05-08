@@ -40,6 +40,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "clean": "find src -type f -name '*.js' -exec rm {} \\+",
     "format": "prettier --write '*.js' '{src,types}/**/*.ts'",
     "start": "NODE_ENV=production node src/index.js"
   }
