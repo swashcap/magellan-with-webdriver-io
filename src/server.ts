@@ -44,7 +44,8 @@ const getServer = async () => {
         files: {},
         options: {
           appMountId: 'app',
-          title: 'Magellan with WebdriverIO'
+          title: 'Magellan with WebdriverIO',
+          scripts: ['/dist/bundle.js']
         }
       }
     },
@@ -64,12 +65,12 @@ const getServer = async () => {
     handler: {
       directory: {
         index: false,
-        path: path.resolve(__dirname, '../assets'),
+        path: path.resolve(__dirname, '../dist'),
         redirectToSlash: true
       }
     },
     method: 'GET',
-    path: '/assets/{param*}'
+    path: '/dist/{param*}'
   })
 
   return server
