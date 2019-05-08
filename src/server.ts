@@ -44,8 +44,11 @@ const getServer = async () => {
         files: {},
         options: {
           appMountId: 'app',
-          title: 'Magellan with WebdriverIO',
-          scripts: ['/dist/bundle.js']
+          links: [
+            'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'
+          ],
+          scripts: ['/dist/bundle.js'],
+          title: 'Magellan with WebdriverIO'
         }
       }
     },
