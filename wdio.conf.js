@@ -169,7 +169,7 @@ exports.config = {
   before: function(capabilities, specs) {
     require('ts-node').register({
       files: true,
-      project: path.join(__dirname, 'tsconfig-test.json')
+      project: path.join(__dirname, 'test/tsconfig.json')
     })
   }
   /**

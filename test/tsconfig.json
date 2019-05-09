@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "types": ["mocha", "node", "webdriverio"]
+  },
+  "include": ["./**/*.ts"]
+}
