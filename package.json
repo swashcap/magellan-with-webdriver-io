@@ -60,7 +60,7 @@
     "build": "run-p build:*",
     "build:client": "mkdir -p dist && rollup -c",
     "build:ts": "tsc",
-    "clean": "find src -type f -name '*.js' -exec rm {} \\+",
+    "clean": "scripts/clean.sh",
     "format": "prettier --write '*.js' '{src,types}/**/*.{ts,tsx}'",
     "start": "NODE_ENV=production node src/server.js",
     "test": "wdio wdio.conf.js"
