@@ -17,6 +17,6 @@ export default {
       extensions: ['.js', '.ts', '.tsx']
     }),
     typescript(),
-    uglify()
-  ]
+    process.env.NODE_ENV === 'production' && uglify()
+  ].filter(Boolean)
 }
