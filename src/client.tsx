@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 const App = () => (
-  <div>
+  <div className="app">
     <h1>Hello, World!</h1>
     <p>This is a sample React application.</p>
     <form action="/login" method="POST">
