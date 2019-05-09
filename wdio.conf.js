@@ -92,6 +92,10 @@ exports.config = {
   // gets prepended directly.
   baseUrl: 'http://localhost:4000',
   //
+  // Geckodriver requires a path
+  // https://github.com/webdriverio/webdriverio/issues/3183
+  path: '/',
+  //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
   //
