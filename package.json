@@ -64,9 +64,6 @@
     "clean": "scripts/clean.sh",
     "format": "prettier --write '*.js' '{src,types}/**/*.{ts,tsx}'",
     "start": "NODE_ENV=production node src/server.js",
-    "test": "run-p test:*",
-    "test:driver": "geckodriver --log error",
-    "test:server": "yarn build && yarn start",
-    "test:wdio": "wait-on --delay 500 --log http://localhost:4000 http-get://localhost:4444/status && wdio -c wdio.conf.js"
+    "test": "yarn build && scripts/test.sh"
   }
 }
