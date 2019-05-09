@@ -1,3 +1,4 @@
+/// <reference types="webdriverio" />
 import { assert } from 'chai'
 
 describe('home page', () => {
