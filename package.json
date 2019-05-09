@@ -61,7 +61,7 @@
     "build:client": "mkdir -p dist && rollup -c",
     "build:ts": "tsc",
     "clean": "scripts/clean.sh",
-    "format": "prettier --write '*.js' '{src,types}/**/*.{ts,tsx}'",
+    "format": "prettier --write '*.js' '{src,test,types}/**/*.{ts,tsx}'",
     "start": "NODE_ENV=production node src/server.js",
     "test": "yarn build && scripts/test.sh"
   }

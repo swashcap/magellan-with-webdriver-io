@@ -7,4 +7,11 @@ describe('home page', () => {
     const title = await browser.getTitle()
     assert.equal(title, 'Magellan with WebdriverIO')
   })
+  it('should have a login form', async () => {
+    const app = await $('.app')
+    app.waitForExist()
+
+    assert($('input#username'), 'Has username input')
+    assert($('input#password'), 'Has password input')
+  })
 })
