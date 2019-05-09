@@ -133,7 +133,6 @@ exports.config = {
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: 'bdd',
-    require: ['tsconfig-paths/register'],
     timeout: 60000
   },
   //
