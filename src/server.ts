@@ -9,7 +9,7 @@ import vision from '@hapi/vision'
 
 const port = 4000
 
-const getServer = async () => {
+export const getServer = async () => {
   const server = new hapi.Server({ port })
 
   await server.register([inert, vision])
